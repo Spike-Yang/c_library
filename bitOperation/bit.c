@@ -1,5 +1,5 @@
-#include "bit.h"
 #include <stdio.h>
+#include "../include/bit.h"
 
 void getFirstIndexOfSetBit32(unsigned int data, int *index)
 {
@@ -12,7 +12,7 @@ void getFirstIndexOfSetBit32(unsigned int data, int *index)
     
     for (i = 0; i < 32; i++)
     {
-        if (data & (1 << i))
+        if (BIT_CHECK(data, i))
         {
             *index = i;
             return;
